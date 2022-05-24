@@ -1,3 +1,6 @@
+This repository belongs to the Master Thesis of Arend-Jan Quist (2022).
+It consists of simulations on the collimation sieve and post-processing algorithm from Peikert (2020).
+
 # Simulator_c-sieve
 
 Simulator of the collimation sieve as described by Peikert (2020). 
