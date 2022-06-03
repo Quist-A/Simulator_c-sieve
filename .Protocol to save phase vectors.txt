@@ -1,0 +1,60 @@
+PROTOCOL TO STORE PHASE VECTORS
+
+This is a protocol to export and store phase vectors from the simulator of the c-sieve to import them in the post-processing simulator. 
+For an example to save and load: see below.
+
+===========================
+
+LOCATION
+
+Phase vectors are stored in the folder Phasevectors
+
+
+===========================
+
+COMPRESSION
+
+Phase vectors are compressed as .npz files.
+
+
+===========================
+
+FORMAT OF STORAGE
+
+Phase vectors are saved in the following format:
+
+data = array([array([multipliers]),L_realized,S,N])
+
+
+Summarized:
+
+multipliers = data[0]
+L = data[1]
+S = data[2]
+N = data[3]
+
+
+===========================
+
+EXAMPLE OF STORAGE AND LOAD
+
+outfile = "Phasevectors/My_Saved_Phasevector.npz"
+np.savez_compressed(outfile, data=my_phasevector)
+
+infile = "Phasevectors/My_Saved_Phasevector.npz"
+data=np.load(infile,allow_pickle=True)['data']
+multipliers = data[0]
+L = data[1]
+S = data[2]
+N = data[3]
+
+
+===========================
+
+FILENAME STANDARD
+
+Files should have the following name:
+
+phasevector_L_S_N_r_n.npz
+
+where L, S, N and r are the decimal representations of the corresponding parameter and n = 0,1,2,... in the index of the run.
