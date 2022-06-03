@@ -1,7 +1,7 @@
 This repository belongs to the Master Thesis of Arend-Jan Quist (2022).
 It consists of simulations on the collimation sieve and post-processing algorithm from Peikert (2020).
 
-# Usage
+# Usage of the code
 
 The python code in "C_sieve_simulator.py" is the simulator of the c-sieve of Peikert's algorithm.
 Use "Plot_multipliers_c-sieve.ipynb" to reproduce the pictures of the c-sieve output as presented in the thesis.
